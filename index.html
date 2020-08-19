@@ -23,7 +23,8 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input id="searchText"class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input id="searchText" class="form-control mr-sm-2" type="search" placeholder="Search"
+                    aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
@@ -36,9 +37,14 @@
         </h1>
         <div class="card">
             <div class="card-body">
+                <div class="form-group">
+                    <h5 class="card-title">Add a Title</h5>
+                    <input type="text" class="form-control" id="addTitle" aria-describedby="emailHelp"
+                        placeholder="Enter Title">
+                </div>
                 <h5 class="card-title">Add a Note</h5>
                 <div class="form-group">
-                    <textarea class="form-control" id="addText" rows="3"></textarea>
+                    <textarea class="form-control" id="addText" rows="3" placeholder="Enter Your Note"></textarea>
                 </div>
                 <button class="btn btn-primary" id="addbtn">Add Note</button>
             </div>
@@ -49,7 +55,7 @@
         </h1>
         <hr>
         <div id="notes" class="row container-fluid">
-           
+
         </div>
     </div>
 
@@ -62,7 +68,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
