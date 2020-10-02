@@ -80,12 +80,15 @@ function deleteNote(index){
 let search = document.getElementById("searchText")
 search.addEventListener("input", ()=>{
 
-    let inputVal = search.value.toLowerCase()
+    let inputVal = search.value.toLowerCase().trim()
     console.log("input event fired", inputVal);
     let noteCards = document.getElementsByClassName('noteCard')
     Array.from(noteCards).forEach((e)=>{
-        let cardText = e.getElementsByTagName('p')[0].innerText
-        if(cardText.includes(inputVal)){
+        // grabbing both the note title and content
+        let cardTitle = e.getElementsByTagName('h5')[0].innerText.toLowerCase().trim()
+        let cardText = e.getElementsByTagName('p')[0].innerText.toLowerCase().trim() 
+        // comparing the input to either title OR note content
+        if(cardTitle.includes(inputVal) || cardText.includes(inputVal)){
             e.style.display = 'block'
         }else{
             e.style.display = 'none'
